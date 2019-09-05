@@ -1,5 +1,8 @@
 import React from 'react';
 
+import TodoFrom from './components/TodoComponents/TodoForm.js';
+import TodoList from './components/TodoComponents/TodoList.js'
+
 const todoData = [
   {
     task: 'Organize Garage',
@@ -23,11 +26,15 @@ class App extends React.Component {
       todoData
     }
   }
-  
+
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <TodoFrom />
+        <TodoList 
+        todoData={this.state.todoData}
+         />
       </div>
     );
   }
